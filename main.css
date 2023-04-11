@@ -47,7 +47,7 @@ ul {
     padding: 0;
 }
 
-ul li {
+ul>li {
     list-style: none;
 }
 
@@ -60,7 +60,7 @@ a:hover {
     font-weight: bold;
 }
 
-a span:hover {
+a>span:hover {
     font-weight: bold;
     color: #800080;
 }
@@ -71,7 +71,7 @@ a span:hover {
 
 #leftbar,
 #center,
-#righbar {
+#rightbar {
     float: left;
     padding: 0 30px;
     box-sizing: border-box;
@@ -99,4 +99,56 @@ footer {
 
 #topban h2 {
     text-align: center;
+}
+
+ul.clfooter {
+    text-align: center;
+    border-top: 1px solid gray;
+    padding: 10px 0;
+}
+
+ul.clfooter>li {
+    display: inline;
+    padding-right: 5px;
+}
+
+h4.ban::before {
+    content: "☮️";
+}
+
+td {
+    border: 1px solid #333;
+}
+
+.cal {
+    border-collapse: collapse;
+}
+
+link {
+    color: green;
+    font-weight: bold;
+}
+
+.cal td {
+    text-align: center;
+}
+
+
+/*Change the color of the text of the days in the calendar that are not links to a half-transparent black.*/
+
+.cal td:not(a) {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.cal td:not(a) {
+    cursor: not-allowed;
+}
+
+.cal td.today a {
+    color: white;
+    background-color: darkviolet;
+}
+
+.cal td a:hover {
+    background-color: lavender;
 }
